@@ -1,0 +1,8 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as o}from"./PageContainer-D1JhFxkd.js";import{C as a}from"./CodeBlock-CbV_OQLb.js";import{A as n}from"./AlertBox-BTEjDUYQ.js";function r(){return e.jsxs(o,{title:"E, OU, NÃO — Lógica Booleana",subtitle:"Combinando condições nas fórmulas SE e na Formatação Condicional.",difficulty:"iniciante",timeToRead:"6 min",children:[e.jsx("h2",{children:"E — todas as condições verdadeiras"}),e.jsx(a,{language:"text",code:`=E(A2>0; A2<100)            → VERDADEIRO se A2 entre 1 e 99
+  =E(B2="SP"; C2>5000)        → SP E venda > 5000
+  =SE(E(A2>=7; B2>=7); "Aprovado"; "Recuperação")`}),e.jsx("h2",{children:"OU — ao menos uma verdadeira"}),e.jsx(a,{language:"text",code:`=OU(A2="SP"; A2="RJ"; A2="MG")
+  =SE(OU(B2<0; B2>1000); "fora do limite"; "ok")`}),e.jsx("h2",{children:"NÃO — inverte"}),e.jsx(a,{language:"text",code:`=NÃO(A2="ativo")    → VERDADEIRO se A2 não for "ativo"
+  =SE(NÃO(ÉCÉL.VAZIA(A2)); A2*2; "")`}),e.jsx("h2",{children:"XOU — ou exclusivo"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Verdadeiro quando exatamente uma das condições é verdadeira. Útil em validações lógicas avançadas."}}),e.jsx(a,{language:"text",code:`=XOU(A1>0; B1>0)
+  A1=5, B1=0    → VERDADEIRO  (só A1)
+  A1=5, B1=3    → FALSO       (ambos)
+  A1=0, B1=0    → FALSO       (nenhum)`}),e.jsx(n,{type:"tip",title:"Operações booleanas como números",children:e.jsx("span",{dangerouslySetInnerHTML:{__html:'VERDADEIRO = 1, FALSO = 0. Você pode multiplicar/somar: <code>=(A2&gt;0)*(A2&lt;100)</code> faz papel de E. <code>=(A2="SP")+(A2="RJ")</code> faz papel de OU.'}})})]})}export{r as default};
