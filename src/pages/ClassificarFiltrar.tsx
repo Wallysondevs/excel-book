@@ -6,15 +6,15 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="Classificar e Filtrar" subtitle="Sort, AutoFilter e Filtro Avançado." difficulty="iniciante" timeToRead="8 min">
         <h2>Classificar (Sort)</h2>
-      <p>Selecione qualquer célula da lista e <strong>Dados → Classificar</strong>. Excel detecta os cabeçalhos automaticamente.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Selecione qualquer célula da lista e <strong>Dados → Classificar</strong>. Excel detecta os cabeçalhos automaticamente." }} />
       <ul>
-        <li>Atalho rápido: A→Z (<code>Alt + A + S + A</code>) ou Z→A (<code>Alt + A + S + D</code>).</li>
-        <li>Múltiplos níveis: classificar por Estado, depois por Vendedor, depois por Data.</li>
-        <li>Por cor de célula ou cor de fonte (formatação condicional).</li>
-        <li>Lista personalizada: ordenar por Janeiro, Fevereiro... (não alfabética).</li>
+        <li dangerouslySetInnerHTML={{ __html: "Atalho rápido: A→Z (<code>Alt + A + S + A</code>) ou Z→A (<code>Alt + A + S + D</code>)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Múltiplos níveis: classificar por Estado, depois por Vendedor, depois por Data." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Por cor de célula ou cor de fonte (formatação condicional)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Lista personalizada: ordenar por Janeiro, Fevereiro... (não alfabética)." }} />
       </ul>
       <h2>AutoFiltro</h2>
-      <p>Selecione célula da tabela e <strong>Dados → Filtro</strong> (ou <code>Ctrl + Shift + L</code>). Aparecem setinhas em cada cabeçalho. Tabelas (Ctrl+T) já vêm com filtro.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Selecione célula da tabela e <strong>Dados → Filtro</strong> (ou <code>Ctrl + Shift + L</code>). Aparecem setinhas em cada cabeçalho. Tabelas (Ctrl+T) já vêm com filtro." }} />
       <CodeBlock language="text" code={`Cliques na setinha:
   • Ordenação rápida
   • Filtros de texto: contém, começa com, igual...
@@ -23,7 +23,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   • Caixas de seleção para escolher valores específicos
   • Filtrar por cor`} />
       <h2>Filtro Avançado</h2>
-      <p><strong>Dados → Avançado</strong>. Permite filtros com regras complexas em outra área da planilha e copiar resultado para outro local. Suporta E (mesma linha) e OU (linhas diferentes).</p>
+      <p dangerouslySetInnerHTML={{ __html: "<strong>Dados → Avançado</strong>. Permite filtros com regras complexas em outra área da planilha e copiar resultado para outro local. Suporta E (mesma linha) e OU (linhas diferentes)." }} />
       <CodeBlock language="text" code={`Critérios em E10:F12:
   | Estado | Total |
   | SP     | >5000 |     ← E
@@ -36,7 +36,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 
   * representa E,  + representa OU.`} />
       <AlertBox type="tip" title="FILTRO + CLASSIFICAR + ÚNICO">
-        Combine: <code>=CLASSIFICAR(ÚNICO(FILTRO(A:A; B:B="SP"))) </code> — lista única e ordenada de SP.
+        <span dangerouslySetInnerHTML={{ __html: "Combine: <code>=CLASSIFICAR(ÚNICO(FILTRO(A:A; B:B=\"SP\"))) </code> — lista única e ordenada de SP." }} />
       </AlertBox>
       </PageContainer>
     );

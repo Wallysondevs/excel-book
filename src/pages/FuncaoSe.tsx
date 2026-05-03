@@ -12,13 +12,13 @@ import { PageContainer } from "@/components/layout/PageContainer";
   =SE(B2="SP"; B2*1,18; B2*1,12)
   =SE(C2=""; ""; C2*1,1)`} />
       <h2>Aninhando SE</h2>
-      <p>Você pode colocar um SE dentro de outro para criar várias faixas:</p>
+      <p dangerouslySetInnerHTML={{ __html: "Você pode colocar um SE dentro de outro para criar várias faixas:" }} />
       <CodeBlock language="text" code={`=SE(A2>=9; "A";
      SE(A2>=7; "B";
      SE(A2>=5; "C";
      SE(A2>=3; "D"; "F"))))`} />
       <AlertBox type="warning" title="SE aninhado fica confuso!">
-        Acima de 3 níveis, prefira <strong>SES</strong>, <strong>PROCV</strong> com correspondência aproximada, ou <strong>PROC</strong>.
+        <span dangerouslySetInnerHTML={{ __html: "Acima de 3 níveis, prefira <strong>SES</strong>, <strong>PROCV</strong> com correspondência aproximada, ou <strong>PROC</strong>." }} />
       </AlertBox>
       <h2>SES — múltiplas condições (Excel 2019+)</h2>
       <CodeBlock language="text" code={`=SES(A2>=9; "A";
@@ -27,7 +27,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
          A2>=3; "D";
          VERDADEIRO; "F")`} />
       <h2>SE.ERRO e SE.NÃO.DISP</h2>
-      <p>Encapsulam fórmulas que podem dar erro:</p>
+      <p dangerouslySetInnerHTML={{ __html: "Encapsulam fórmulas que podem dar erro:" }} />
       <CodeBlock language="text" code={`=SE.ERRO(A2/B2; 0)
   =SE.ERRO(PROCV(...); "Não encontrado")
   =SE.NÃO.DISP(PROCV(...); "Cód. inválido")    → captura só #N/D`} />

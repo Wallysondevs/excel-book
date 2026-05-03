@@ -36,7 +36,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   =TEXTO(HOJE(); "dddd, dd 'de' mmmm 'de' aaaa")
      → "domingo, 03 de maio de 2026"`} />
       <AlertBox type="tip" title="TEXTO formata sem perder valor">
-        Use <code>TEXTO()</code> dentro de concatenações para preservar o formato: <code>="Total: "&TEXTO(A1;"R$ #.##0,00")</code>.
+        <span dangerouslySetInnerHTML={{ __html: "Use <code>TEXTO()</code> dentro de concatenações para preservar o formato: <code>=\"Total: \"&TEXTO(A1;\"R$ #.##0,00\")</code>." }} />
       </AlertBox>
       </PageContainer>
     );

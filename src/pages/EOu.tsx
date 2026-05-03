@@ -16,13 +16,13 @@ import { PageContainer } from "@/components/layout/PageContainer";
       <CodeBlock language="text" code={`=NÃO(A2="ativo")    → VERDADEIRO se A2 não for "ativo"
   =SE(NÃO(ÉCÉL.VAZIA(A2)); A2*2; "")`} />
       <h2>XOU — ou exclusivo</h2>
-      <p>Verdadeiro quando exatamente uma das condições é verdadeira. Útil em validações lógicas avançadas.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Verdadeiro quando exatamente uma das condições é verdadeira. Útil em validações lógicas avançadas." }} />
       <CodeBlock language="text" code={`=XOU(A1>0; B1>0)
   A1=5, B1=0    → VERDADEIRO  (só A1)
   A1=5, B1=3    → FALSO       (ambos)
   A1=0, B1=0    → FALSO       (nenhum)`} />
       <AlertBox type="tip" title="Operações booleanas como números">
-        VERDADEIRO = 1, FALSO = 0. Você pode multiplicar/somar: <code>=(A2&gt;0)*(A2&lt;100)</code> faz papel de E. <code>=(A2="SP")+(A2="RJ")</code> faz papel de OU.
+        <span dangerouslySetInnerHTML={{ __html: "VERDADEIRO = 1, FALSO = 0. Você pode multiplicar/somar: <code>=(A2&gt;0)*(A2&lt;100)</code> faz papel de E. <code>=(A2=\"SP\")+(A2=\"RJ\")</code> faz papel de OU." }} />
       </AlertBox>
       </PageContainer>
     );

@@ -39,7 +39,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   =DIA.TRABALHO(A1; 10)             → 10º dia útil após A1
   =DIA.TRABALHO.INTL(A1; 10; 11)    → dom como único dia não útil`} />
       <AlertBox type="info" title="Datas anteriores a 1900">
-        O Excel não reconhece datas antes de 01/01/1900 como datas reais — vira texto.
+        <span dangerouslySetInnerHTML={{ __html: "O Excel não reconhece datas antes de 01/01/1900 como datas reais — vira texto." }} />
       </AlertBox>
       <h2>Funções de hora</h2>
       <CodeBlock language="text" code={`=TEMPO(14; 30; 0)    → 14:30:00

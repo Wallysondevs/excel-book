@@ -54,7 +54,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   Alt + N + V              → inserir Tabela Dinâmica
   F4 (na fórmula)          → alterna \$A\$1, A\$1, \$A1, A1`} />
       <AlertBox type="tip" title="Alt revela tudo">
-        Pressione <code>Alt</code> sozinho. Aparecerão letras sobre cada guia/comando. Acesse qualquer função do Ribbon sem mouse — ex: <code>Alt + N + T</code> insere Tabela.
+        <span dangerouslySetInnerHTML={{ __html: "Pressione <code>Alt</code> sozinho. Aparecerão letras sobre cada guia/comando. Acesse qualquer função do Ribbon sem mouse — ex: <code>Alt + N + T</code> insere Tabela." }} />
       </AlertBox>
       </PageContainer>
     );

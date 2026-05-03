@@ -6,18 +6,18 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="UserForms" subtitle="Formulários customizados em VBA para aplicações no Excel." difficulty="avancado" timeToRead="8 min">
         <h2>Conceito</h2>
-      <p>Um <strong>UserForm</strong> é uma janela personalizada criada no Editor VBA, com botões, caixas de texto, listas — uma mini-aplicação dentro do Excel.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Um <strong>UserForm</strong> é uma janela personalizada criada no Editor VBA, com botões, caixas de texto, listas — uma mini-aplicação dentro do Excel." }} />
       <h2>Criar</h2>
-      <p>Editor VBA → <strong>Inserir → UserForm</strong>. Abre janela em branco e a Caixa de Ferramentas.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Editor VBA → <strong>Inserir → UserForm</strong>. Abre janela em branco e a Caixa de Ferramentas." }} />
       <h2>Controles principais</h2>
       <ul>
-        <li><strong>Label</strong> — texto fixo (rótulo).</li>
-        <li><strong>TextBox</strong> — caixa de texto.</li>
-        <li><strong>ComboBox</strong> — dropdown.</li>
-        <li><strong>ListBox</strong> — lista (seleção múltipla opcional).</li>
-        <li><strong>CheckBox / OptionButton</strong> — caixa de seleção / botão de opção.</li>
-        <li><strong>CommandButton</strong> — botão de ação.</li>
-        <li><strong>Frame</strong> — agrupa controles.</li>
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Label</strong> — texto fixo (rótulo)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>TextBox</strong> — caixa de texto." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>ComboBox</strong> — dropdown." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>ListBox</strong> — lista (seleção múltipla opcional)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>CheckBox / OptionButton</strong> — caixa de seleção / botão de opção." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>CommandButton</strong> — botão de ação." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Frame</strong> — agrupa controles." }} />
       </ul>
       <h2>Exemplo: cadastro de cliente</h2>
       <CodeBlock language="vbnet" code={`' Duplo clique no botão "Salvar":
@@ -45,9 +45,9 @@ import { PageContainer } from "@/components/layout/PageContainer";
       <CodeBlock language="vbnet" code={`Sub AbrirCadastro()
       UserForm1.Show
   End Sub`} />
-      <p>Atribua a um botão na planilha para o usuário abrir o cadastro com 1 clique.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Atribua a um botão na planilha para o usuário abrir o cadastro com 1 clique." }} />
       <AlertBox type="tip" title="Validação antes de salvar">
-        Antes de gravar dados, valide com If: <code>If txtEmail.Value = "" Then MsgBox "Email obrigatório": Exit Sub</code>.
+        <span dangerouslySetInnerHTML={{ __html: "Antes de gravar dados, valide com If: <code>If txtEmail.Value = \"\" Then MsgBox \"Email obrigatório\": Exit Sub</code>." }} />
       </AlertBox>
       </PageContainer>
     );

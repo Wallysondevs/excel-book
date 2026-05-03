@@ -6,18 +6,18 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="Solver" subtitle="Otimização com múltiplas variáveis e restrições." difficulty="avancado" timeToRead="9 min">
         <h2>O que é?</h2>
-      <p><strong>Suplemento Solver</strong> resolve problemas de otimização: maximizar lucro, minimizar custo, encontrar a mistura ideal — respeitando restrições. Ative em <strong>Arquivo → Opções → Suplementos → Solver</strong>.</p>
+      <p dangerouslySetInnerHTML={{ __html: "<strong>Suplemento Solver</strong> resolve problemas de otimização: maximizar lucro, minimizar custo, encontrar a mistura ideal — respeitando restrições. Ative em <strong>Arquivo → Opções → Suplementos → Solver</strong>." }} />
       <h2>Componentes</h2>
       <ul>
-        <li><strong>Função objetivo:</strong> a célula a ser maximizada, minimizada ou igualada a um valor.</li>
-        <li><strong>Variáveis (células ajustáveis):</strong> o que o Solver pode mexer.</li>
-        <li><strong>Restrições:</strong> condições que não podem ser violadas.</li>
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Função objetivo:</strong> a célula a ser maximizada, minimizada ou igualada a um valor." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Variáveis (células ajustáveis):</strong> o que o Solver pode mexer." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Restrições:</strong> condições que não podem ser violadas." }} />
       </ul>
       <h2>Métodos disponíveis</h2>
       <ul>
-        <li><strong>GRG Não-linear</strong> — problemas suaves, várias variáveis (padrão).</li>
-        <li><strong>Simplex LP</strong> — programação linear (rápido, ótimo global).</li>
-        <li><strong>Evolutionary</strong> — problemas não-suaves, com cláusulas SE.</li>
+        <li dangerouslySetInnerHTML={{ __html: "<strong>GRG Não-linear</strong> — problemas suaves, várias variáveis (padrão)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Simplex LP</strong> — programação linear (rápido, ótimo global)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "<strong>Evolutionary</strong> — problemas não-suaves, com cláusulas SE." }} />
       </ul>
       <h2>Exemplo: mix de produtos</h2>
       <CodeBlock language="text" code={`Quantidades de A e B (variáveis):  C2, C3
@@ -29,7 +29,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
     C2 + C3 <= 100   (capacidade total)
     2*C2 + 5*C3 <= 300  (matéria-prima)`} />
       <AlertBox type="tip" title="Salvar cenários">
-        Após resolver, o Solver oferece <strong>Salvar Cenário</strong> para guardar a solução no Gerenciador de Cenários.
+        <span dangerouslySetInnerHTML={{ __html: "Após resolver, o Solver oferece <strong>Salvar Cenário</strong> para guardar a solução no Gerenciador de Cenários." }} />
       </AlertBox>
       </PageContainer>
     );

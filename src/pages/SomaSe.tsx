@@ -18,7 +18,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   =SOMASE(C:C; ">="&HOJE(); D:D)   → datas a partir de hoje
   =SOMASE(A:A; F2; B:B)            → critério em outra célula`} />
       <AlertBox type="warning" title="Operadores entre aspas!">
-        Os símbolos <code>&gt;</code>, <code>&lt;</code>, <code>=</code>, <code>&lt;&gt;</code> precisam vir <strong>dentro de aspas</strong>: <code>"&gt;100"</code>. Para usar valor de célula: <code>"&gt;"&amp;A1</code>.
+        <span dangerouslySetInnerHTML={{ __html: "Os símbolos <code>&gt;</code>, <code>&lt;</code>, <code>=</code>, <code>&lt;&gt;</code> precisam vir <strong>dentro de aspas</strong>: <code>\"&gt;100\"</code>. Para usar valor de célula: <code>\"&gt;\"&amp;A1</code>." }} />
       </AlertBox>
       <h2>SOMASES — múltiplas condições</h2>
       <CodeBlock language="text" code={`=SOMASES( intervalo_soma ;
@@ -29,9 +29,9 @@ import { PageContainer } from "@/components/layout/PageContainer";
            tblVend[Estado]; "SP";
            tblVend[Mês]; "Janeiro";
            tblVend[Total]; ">1000")`} />
-      <p><strong>Atenção:</strong> em SOMASES o <strong>intervalo de soma é o primeiro</strong> argumento, ao contrário de SOMASE.</p>
+      <p dangerouslySetInnerHTML={{ __html: "<strong>Atenção:</strong> em SOMASES o <strong>intervalo de soma é o primeiro</strong> argumento, ao contrário de SOMASE." }} />
       <h2>MÉDIASE / MÉDIASES e MÁXIMOSES / MÍNIMOSES</h2>
-      <p>Mesma sintaxe de SOMASES, mas calculam média/máximo/mínimo condicional. Disponíveis desde Excel 2016.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Mesma sintaxe de SOMASES, mas calculam média/máximo/mínimo condicional. Disponíveis desde Excel 2016." }} />
       <CodeBlock language="text" code={`=MÉDIASES(tblV[Preço]; tblV[Categoria]; "Eletrônico")
   =MÁXIMOSES(tblV[Preço]; tblV[Estado]; "SP")
   =MÍNIMOSES(tblV[Data]; tblV[Cliente]; A2)`} />

@@ -6,7 +6,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="ÍNDICE + CORRESP" subtitle="A dupla flexível que dominou o Excel antes do PROCX." difficulty="avancado" timeToRead="10 min">
         <h2>Por que aprender se já tem PROCX?</h2>
-      <p>Compatibilidade — funcionam desde Excel 2003. Você ainda encontra muito em planilhas legadas e empresas em versões perpétuas.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Compatibilidade — funcionam desde Excel 2003. Você ainda encontra muito em planilhas legadas e empresas em versões perpétuas." }} />
       <h2>ÍNDICE — pega valor por linha/coluna</h2>
       <CodeBlock language="text" code={`=ÍNDICE( matriz ; número_linha ; [número_coluna] )
 
@@ -33,7 +33,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
           CORRESP("Caneta"; A2:A100; 0);
           CORRESP("Mar"; B1:M1; 0))`} />
       <AlertBox type="tip" title="Performance">
-        ÍNDICE+CORRESP é mais rápido que PROCV em bases grandes porque você só pesquisa a coluna necessária, não a tabela inteira.
+        <span dangerouslySetInnerHTML={{ __html: "ÍNDICE+CORRESP é mais rápido que PROCV em bases grandes porque você só pesquisa a coluna necessária, não a tabela inteira." }} />
       </AlertBox>
       </PageContainer>
     );

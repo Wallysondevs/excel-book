@@ -6,16 +6,16 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="Tabela Dinâmica" subtitle="Resuma, agrupe e analise milhares de linhas em segundos." difficulty="intermediario" timeToRead="12 min">
         <h2>Conceito</h2>
-      <p><strong>Tabela Dinâmica (PivotTable)</strong> é a ferramenta mais poderosa de análise do Excel. Você pega uma base de linhas e a transforma em resumo cruzando dimensões — tudo arrastando campos.</p>
+      <p dangerouslySetInnerHTML={{ __html: "<strong>Tabela Dinâmica (PivotTable)</strong> é a ferramenta mais poderosa de análise do Excel. Você pega uma base de linhas e a transforma em resumo cruzando dimensões — tudo arrastando campos." }} />
       <h2>Pré-requisitos da base</h2>
       <ul>
-        <li>Tabela <strong>plana</strong> (uma observação por linha).</li>
-        <li>Cabeçalhos únicos na primeira linha, sem células mescladas.</li>
-        <li>Sem linhas vazias intermediárias.</li>
-        <li>Idealmente formate como Tabela (Ctrl+T) antes — assim a Pivot expande automaticamente.</li>
+        <li dangerouslySetInnerHTML={{ __html: "Tabela <strong>plana</strong> (uma observação por linha)." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Cabeçalhos únicos na primeira linha, sem células mescladas." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Sem linhas vazias intermediárias." }} />
+        <li dangerouslySetInnerHTML={{ __html: "Idealmente formate como Tabela (Ctrl+T) antes — assim a Pivot expande automaticamente." }} />
       </ul>
       <h2>Criar uma</h2>
-      <p>Selecione a base → <strong>Inserir → Tabela Dinâmica</strong>. Escolha o destino (nova planilha é o padrão). Aparece o painel <strong>Campos da Tabela Dinâmica</strong> com 4 áreas:</p>
+      <p dangerouslySetInnerHTML={{ __html: "Selecione a base → <strong>Inserir → Tabela Dinâmica</strong>. Escolha o destino (nova planilha é o padrão). Aparece o painel <strong>Campos da Tabela Dinâmica</strong> com 4 áreas:" }} />
       <CodeBlock language="text" code={`┌──────────────────┐
   │  Filtros         │  ← filtra a tabela toda
   ├──────────────────┤
@@ -33,18 +33,18 @@ import { PageContainer } from "@/components/layout/PageContainer";
   Valores:   Total (Soma)
   Filtros:   Vendedor`} />
       <h2>Mudar agregação</h2>
-      <p>Botão direito no campo de Valores → <strong>Resumir Valores Por</strong>: Soma, Contagem, Média, Máx, Mín, Produto, Desvio Padrão, Variância.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Botão direito no campo de Valores → <strong>Resumir Valores Por</strong>: Soma, Contagem, Média, Máx, Mín, Produto, Desvio Padrão, Variância." }} />
       <h2>Mostrar valores como</h2>
-      <p>Mesmo menu → <strong>Mostrar Valores Como</strong>: % do total, % do total da linha/coluna, diferença em relação a, classificação, número acumulado.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Mesmo menu → <strong>Mostrar Valores Como</strong>: % do total, % do total da linha/coluna, diferença em relação a, classificação, número acumulado." }} />
       <CodeBlock language="text" code={`% do total geral         → quanto cada estado representa
   % do total da coluna     → 100% por mês, distribui entre estados
   Diferença de             → comparar com mês anterior
   Classificação            → ranking 1, 2, 3...`} />
       <AlertBox type="tip" title="Atualizar dados">
-        Quando a base muda, clique direito na pivot → <strong>Atualizar</strong>, ou <code>Alt + F5</code>. Se a base for Tabela (Ctrl+T), novas linhas aparecem automaticamente após Atualizar.
+        <span dangerouslySetInnerHTML={{ __html: "Quando a base muda, clique direito na pivot → <strong>Atualizar</strong>, ou <code>Alt + F5</code>. Se a base for Tabela (Ctrl+T), novas linhas aparecem automaticamente após Atualizar." }} />
       </AlertBox>
       <h2>Layout e estilo</h2>
-      <p>Aba <strong>Design</strong> da pivot: layout (Compacto / Esboço / Tabular), subtotais, totais gerais, linhas em faixas, estilos.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Aba <strong>Design</strong> da pivot: layout (Compacto / Esboço / Tabular), subtotais, totais gerais, linhas em faixas, estilos." }} />
       </PageContainer>
     );
   }

@@ -29,7 +29,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   % por categoria:
   =CONT.SE(A:A; "Concluído") / CONT.VALORES(A:A)`} />
       <AlertBox type="tip" title="ÚNICO + CONT.SE = ranking">
-        Combine <code>=ÚNICO(A:A)</code> com <code>CONT.SE</code> para listar valores únicos com sua frequência — ranking instantâneo.
+        <span dangerouslySetInnerHTML={{ __html: "Combine <code>=ÚNICO(A:A)</code> com <code>CONT.SE</code> para listar valores únicos com sua frequência — ranking instantâneo." }} />
       </AlertBox>
       </PageContainer>
     );

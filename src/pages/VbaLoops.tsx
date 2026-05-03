@@ -57,7 +57,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   ultima = Cells(Rows.Count, 1).End(xlUp).Row
   ' equivale a Ctrl + Seta para Cima a partir da última linha`} />
       <AlertBox type="tip" title="Performance">
-        Antes de loops grandes, desligue temporariamente:<br><code>Application.ScreenUpdating = False</code><br><code>Application.Calculation = xlCalculationManual</code><br>E reative no fim. Pode acelerar 10-100x.
+        <span dangerouslySetInnerHTML={{ __html: "Antes de loops grandes, desligue temporariamente:<br><code>Application.ScreenUpdating = False</code><br><code>Application.Calculation = xlCalculationManual</code><br>E reative no fim. Pode acelerar 10-100x." }} />
       </AlertBox>
       </PageContainer>
     );

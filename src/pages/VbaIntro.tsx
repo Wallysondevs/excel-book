@@ -6,7 +6,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
     return (
       <PageContainer title="Introdução ao VBA" subtitle="Editor, módulos, Sub, variáveis, MsgBox e seu primeiro script." difficulty="avancado" timeToRead="10 min">
         <h2>O Editor VBA</h2>
-      <p>Abra com <code>Alt + F11</code>. Painel esquerdo (<strong>Project Explorer</strong>) mostra módulos. Painel direito é o editor de código.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Abra com <code>Alt + F11</code>. Painel esquerdo (<strong>Project Explorer</strong>) mostra módulos. Painel direito é o editor de código." }} />
       <CodeBlock language="text" code={`VBAProject (Pasta1.xlsm)
   ├── Microsoft Excel Objects
   │   ├── Plan1
@@ -15,12 +15,12 @@ import { PageContainer } from "@/components/layout/PageContainer";
   └── Módulos
       └── Módulo1   ← seu código fica aqui`} />
       <h2>Inserir um Módulo</h2>
-      <p>No Editor VBA: <strong>Inserir → Módulo</strong>. Aí cole código.</p>
+      <p dangerouslySetInnerHTML={{ __html: "No Editor VBA: <strong>Inserir → Módulo</strong>. Aí cole código." }} />
       <h2>Sua primeira Sub</h2>
       <CodeBlock language="vbnet" code={`Sub OlaMundo()
       MsgBox "Olá, " & Application.UserName & "!"
   End Sub`} />
-      <p>Posicione cursor dentro da Sub e <code>F5</code> para executar. Ou volte ao Excel e <strong>Desenvolvedor → Macros</strong>.</p>
+      <p dangerouslySetInnerHTML={{ __html: "Posicione cursor dentro da Sub e <code>F5</code> para executar. Ou volte ao Excel e <strong>Desenvolvedor → Macros</strong>." }} />
       <h2>Variáveis e tipos</h2>
       <CodeBlock language="vbnet" code={`Dim nome As String
   Dim idade As Integer
@@ -34,7 +34,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
   ativo = True
   hoje = Date     ' data de hoje`} />
       <AlertBox type="tip" title="Sempre Option Explicit">
-        Adicione <code>Option Explicit</code> no topo do módulo. Obriga declarar variáveis (Dim) — evita erros de digitação. Em <strong>Ferramentas → Opções → Editor</strong> marque "Exigir Declaração de Variável" para fazer automático.
+        <span dangerouslySetInnerHTML={{ __html: "Adicione <code>Option Explicit</code> no topo do módulo. Obriga declarar variáveis (Dim) — evita erros de digitação. Em <strong>Ferramentas → Opções → Editor</strong> marque \"Exigir Declaração de Variável\" para fazer automático." }} />
       </AlertBox>
       <h2>Acessando células</h2>
       <CodeBlock language="vbnet" code={`Range("A1").Value = 100
