@@ -57,9 +57,44 @@
 
   ## 🚀 Deploy
 
+  ### Opção 1 — local (com gh-pages)
+
   ```bash
   npm install
-  npm run build
-  npx gh-pages -d dist
+  npm run deploy
   ```
+
+  Isso publica a pasta `dist/` no branch `gh-pages`. Em **Settings → Pages**, escolha **Branch: gh-pages /(root)**.
+
+  ### Opção 2 — GitHub Actions
+
+  Crie o arquivo `.github/workflows/deploy.yml` (não foi possível publicar automaticamente porque o token não possui o escopo `workflow`):
+
+  ```yaml
+  name: Deploy to GitHub Pages
+  on:
+    push: { branches: [main] }
+  permissions: { contents: read, pages: write, id-token: write }
+  jobs:
+    build-deploy:
+      runs-on: ubuntu-latest
+      environment: { name: github-pages, url: ${{ steps.dep.outputs.page_url }} }
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with: { node-version: 20 }
+        - run: npm install
+        - run: npm run build
+        - uses: actions/configure-pages@v5
+        - uses: actions/upload-pages-artifact@v3
+          with: { path: ./dist }
+        - id: dep
+          uses: actions/deploy-pages@v4
+  ```
+
+  Em **Settings → Pages**, deixe **Source: GitHub Actions**.
+
+  ## 🛠 Tecnologia
+
+  React 19 • Vite 7 • Tailwind CSS v4 • Wouter (hash routing) • Framer Motion • React Syntax Highlighter • lucide-react
   
