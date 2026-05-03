@@ -1,0 +1,7 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as o}from"./PageContainer-D1JhFxkd.js";import{C as a}from"./CodeBlock-CbV_OQLb.js";function d(){return e.jsxs(o,{title:"DAX — funções X (SUMX, COUNTX, AVERAGEX)",subtitle:"Calcule linha-a-linha e depois agregue.",difficulty:"avancado",timeToRead:"7 min",children:[e.jsx("h2",{children:"O 'X' significa iteração"}),e.jsx(a,{language:"text",code:`SUMX( tabela ; expressão )
+
+Para cada LINHA de tabela:
+   1. avalia 'expressão' naquela linha
+   2. soma todos os resultados`}),e.jsx("h2",{children:"Por que precisa"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Imagine: você tem Quantidade e PreçoUnit em colunas separadas. <code>SUM(Quantidade) * SUM(Preço)</code> está ERRADO (multiplica somas). O certo é somar os produtos linha a linha:"}}),e.jsx(a,{language:"text",code:`Faturamento = SUMX( Vendas ; Vendas[Quantidade] * Vendas[PreçoUnit] )
+
+→ para cada venda calcula Q×P, depois soma tudo`}),e.jsx("h2",{children:"Família X"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<code>SUMX</code> — soma"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<code>AVERAGEX</code> — média"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<code>COUNTX</code> — conta linhas com valor"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<code>MAXX / MINX</code> — extremos da expressão"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<code>RANKX(tabela; expr)</code> — ranking"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:'<code>CONCATENATEX(tab; expr; ", ")</code> — junta strings'}})]})]})}export{d as default};

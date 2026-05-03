@@ -1,0 +1,6 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as a}from"./PageContainer-D1JhFxkd.js";import{C as n}from"./CodeBlock-CbV_OQLb.js";import{A as r}from"./AlertBox-BTEjDUYQ.js";function d(){return e.jsxs(a,{title:"DAX — VAR e RETURN",subtitle:"Variáveis em DAX — código mais rápido e legível.",difficulty:"avancado",timeToRead:"5 min",children:[e.jsx("h2",{children:"Sintaxe"}),e.jsx(n,{language:"text",code:`Medida =
+VAR Vendas    = [Total Vendas]
+VAR VendasLY  = CALCULATE( [Total Vendas] ; SAMEPERIODLASTYEAR(Calendário[Date]) )
+VAR Diff      = Vendas - VendasLY
+RETURN
+   IF( Vendas > 0 ; DIVIDE(Diff ; VendasLY) ; BLANK() )`}),e.jsx("h2",{children:"Vantagens"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Performance</strong>: o motor calcula cada VAR uma única vez"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Legibilidade</strong>: nome explica intenção"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Debug</strong>: é só trocar o RETURN para inspecionar uma VAR"}})]}),e.jsx(r,{type:"tip",title:"Sempre use VAR",children:e.jsx("span",{dangerouslySetInnerHTML:{__html:"Em qualquer medida com mais de uma operação, use VAR. Vai ser mais rápido e MUITO mais fácil de manter."}})})]})}export{d as default};

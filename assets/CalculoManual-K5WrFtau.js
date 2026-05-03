@@ -1,0 +1,7 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as l}from"./PageContainer-D1JhFxkd.js";import{C as a}from"./CodeBlock-CbV_OQLb.js";function o(){return e.jsxs(l,{title:"Cálculo manual e iterativo",subtitle:"Pause o recálculo automático e resolva referências circulares.",difficulty:"avancado",timeToRead:"5 min",children:[e.jsx("h2",{children:"Cálculo Manual"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Fórmulas → Opções de Cálculo → Manual</strong>"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<kbd>F9</kbd> recalcula tudo / <kbd>Shift</kbd>+<kbd>F9</kbd> só esta planilha"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"Útil ao editar planilha pesada"}})]}),e.jsx("h2",{children:"Cálculo iterativo"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Arquivo → Opções → Fórmulas → Habilitar Cálculo Iterativo</strong>"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"Necessário para algumas referências circulares intencionais"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"Defina máximo de iterações e tolerância"}})]}),e.jsx("h2",{children:"Exemplo de circular intencional — IR sobre IR"}),e.jsx(a,{language:"text",code:`A1 = receita líquida desejada = 10000
+B1 = imposto (sobre o BRUTO)
+C1 = receita BRUTA = A1 + B1
+B1 = C1 * 27,5%
+
+→ B1 depende de C1, e C1 depende de B1. 
+   Sem cálculo iterativo, dá erro #REF.`})]})}export{o as default};

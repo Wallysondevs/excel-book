@@ -1,0 +1,11 @@
+import{j as a}from"./index-COQxS6Ql.js";import{P as o}from"./PageContainer-D1JhFxkd.js";import{C as e}from"./CodeBlock-CbV_OQLb.js";import{A as r}from"./AlertBox-BTEjDUYQ.js";function t(){return a.jsxs(o,{title:"Formatos de arquivo (xlsx, xlsm, xlsb, csv)",subtitle:"Qual escolher e quando — comparação detalhada.",difficulty:"intermediario",timeToRead:"6 min",children:[a.jsx("h2",{children:"Comparação"}),a.jsx(e,{language:"text",code:`Formato | Tamanho | Velocidade | Macros | Uso típico
+.xlsx   | grande  | normal     | não    | padrão moderno
+.xlsm   | grande  | normal     | sim    | pasta com VBA
+.xlsb   | pequeno | rápido     | sim    | pasta GIGANTE (>20MB)
+.csv    | mínimo  | -          | não    | troca com sistemas/banco
+.xls    | médio   | lento      | sim    | legado Excel 97-2003
+.xltx   | -       | -          | não    | modelo (template)`}),a.jsx("h2",{children:"Quando usar .xlsb"}),a.jsxs("ul",{children:[a.jsx("li",{dangerouslySetInnerHTML:{__html:"Pastas com mais de <strong>50 MB</strong> ou centenas de milhares de linhas."}}),a.jsx("li",{dangerouslySetInnerHTML:{__html:"Pastas que demoram muito para abrir/salvar."}}),a.jsx("li",{dangerouslySetInnerHTML:{__html:"Pastas com muitas Tabelas Dinâmicas e fórmulas pesadas."}})]}),a.jsx("h2",{children:"Quando NÃO usar .xlsb"}),a.jsxs("ul",{children:[a.jsx("li",{dangerouslySetInnerHTML:{__html:"Quando outros precisam revisar via web ou Excel Online (suporte limitado)."}}),a.jsx("li",{dangerouslySetInnerHTML:{__html:"Quando você precisa abrir em Mac de versão antiga (compatibilidade)."}}),a.jsx("li",{dangerouslySetInnerHTML:{__html:"Quando vai integrar com Power BI Service (prefira .xlsx)."}})]}),a.jsx("h2",{children:"CSV — armadilhas no BR"}),a.jsx(e,{language:"text",code:`Padrão BR:    separador ; (ponto-e-vírgula), decimal vírgula
+Padrão US:    separador , (vírgula), decimal ponto
+
+UTF-8 vs ANSI: caracteres com acento "vão embora" se a codificação
+                não bater. Sempre prefira UTF-8 com BOM.`}),a.jsx(r,{type:"tip",title:"Conversão em massa",children:a.jsx("span",{dangerouslySetInnerHTML:{__html:"Use Power Query para abrir CSV: você define separador, codificação, tipos de cada coluna e aplica em qualquer arquivo similar com 1 clique."}})})]})}export{t as default};

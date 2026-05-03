@@ -1,0 +1,9 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as r}from"./PageContainer-D1JhFxkd.js";import{C as a}from"./CodeBlock-CbV_OQLb.js";import{A as t}from"./AlertBox-BTEjDUYQ.js";function i(){return e.jsxs(r,{title:"Auditoria de fórmulas",subtitle:"Setas que mostram quem alimenta quem na sua planilha.",difficulty:"intermediario",timeToRead:"5 min",children:[e.jsx("h2",{children:"Atalhos da auditoria"}),e.jsx(a,{language:"text",code:`Ctrl + [        ir para precedente direto (origem)
+Ctrl + ]        ir para dependente direto (quem usa)
+Ctrl + Shift + [   todos os precedentes
+Ctrl + Shift + ]   todos os dependentes
+Ctrl + acento grave      alterna mostrar fórmulas / valores`}),e.jsx("h2",{children:"Setas visuais"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Aba <strong>Fórmulas → Auditoria de Fórmulas</strong>:"}}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Rastrear Precedentes</strong> — setas azuis vindo das células-fonte"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Rastrear Dependentes</strong> — setas saindo para quem usa esta"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Remover Setas</strong> — apaga a visualização"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Mostrar Fórmulas</strong> — toggle entre fórmula e resultado"}})]}),e.jsx("h2",{children:"Caso prático"}),e.jsx(a,{language:"text",code:`Você abre uma planilha herdada e a célula H47 mostra um número estranho.
+1. Selecione H47
+2. Ctrl + [ → pula para a 1ª referência
+3. Ctrl + Shift + [ → mostra setas para TODAS as fontes
+4. Olhe a árvore — encontre a célula errada na origem`}),e.jsx(t,{type:"tip",title:"Setas vermelhas",children:e.jsx("span",{dangerouslySetInnerHTML:{__html:"Setas vermelhas indicam que a fórmula tem ERRO. Setas tracejadas indicam que a fonte está em outra planilha/pasta."}})})]})}export{i as default};

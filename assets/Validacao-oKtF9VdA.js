@@ -1,0 +1,14 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as r}from"./PageContainer-D1JhFxkd.js";import{C as a}from"./CodeBlock-CbV_OQLb.js";import{A as o}from"./AlertBox-BTEjDUYQ.js";function d(){return e.jsxs(r,{title:"Validação de Dados",subtitle:"Restrinja o que pode ser digitado, crie listas suspensas e mensagens.",difficulty:"intermediario",timeToRead:"8 min",children:[e.jsx("h2",{children:"Para que serve?"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Garante qualidade dos dados na entrada — evita digitação errada, número fora do esperado, datas inválidas. Indispensável em planilhas compartilhadas."}}),e.jsx("h2",{children:"Onde fica?"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Selecione células → <strong>Dados → Validação de Dados</strong>. A caixa tem 3 abas: Configurações, Mensagem de entrada, Alerta de erro."}}),e.jsx("h2",{children:"Tipos de validação"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Número inteiro / decimal</strong> — entre, maior que etc."}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Data / Hora</strong> — entre dois períodos."}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Comprimento do texto</strong> — exatamente N caracteres (CPF, CEP)."}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Lista</strong> — dropdown com valores fixos ou de um intervalo."}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"<strong>Personalizado</strong> — qualquer fórmula que devolva VERDADEIRO."}})]}),e.jsx("h2",{children:"Lista suspensa"}),e.jsx(a,{language:"text",code:`Critério: Lista
+  Origem: SP;RJ;MG;BA;RS              (digitando direto)
+  Origem: =$F$2:$F$10                 (intervalo)
+  Origem: =tblEstados[UF]             (de uma tabela — auto-expande)`}),e.jsx(o,{type:"tip",title:"Lista dependente (cascata)",children:e.jsx("span",{dangerouslySetInnerHTML:{__html:"Use <code>=INDIRETO(A2)</code> como origem na lista de B2. Crie nomes para cada UF (SP, RJ...) com cidades dentro. Quando A2=SP, B2 mostra cidades de SP."}})}),e.jsx("h2",{children:"Validação personalizada com fórmula"}),e.jsx(a,{language:"text",code:`Só números pares:
+  =MOD(A1;2)=0
+
+  Não permitir duplicatas:
+  =CONT.SE($A$1:$A$100; A1)=1
+
+  Email com @:
+  =ÉNÚM(LOCALIZAR("@"; A1))
+
+  Apenas datas úteis:
+  =DIA.DA.SEMANA(A1;2)<6`}),e.jsx("h2",{children:"Mensagem e alerta"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Aba <strong>Mensagem de Entrada</strong>: aparece quando a célula é selecionada. <strong>Alerta de Erro</strong>: surge quando o usuário tenta digitar valor inválido. Estilos: Parar (bloqueia), Aviso (avisa, permite continuar), Informação (só informa)."}}),e.jsx("h2",{children:"Identificar dados inválidos existentes"}),e.jsx("p",{dangerouslySetInnerHTML:{__html:"Após criar regra, <strong>Dados → Validação → Circular Dados Inválidos</strong> marca com círculo vermelho tudo que viola a regra."}})]})}export{d as default};

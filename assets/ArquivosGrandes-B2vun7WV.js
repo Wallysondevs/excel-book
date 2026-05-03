@@ -1,0 +1,5 @@
+import{j as e}from"./index-COQxS6Ql.js";import{P as a}from"./PageContainer-D1JhFxkd.js";import{C as r}from"./CodeBlock-CbV_OQLb.js";function i(){return e.jsxs(a,{title:".xlsx, .xlsm, .xlsb, .csv — qual usar quando",subtitle:"Comparativo prático em pastas reais.",difficulty:"intermediario",timeToRead:"5 min",children:[e.jsx("h2",{children:"Cenários"}),e.jsx(r,{language:"text",code:`Pasta de 5 MB com fórmulas simples:    .xlsx (padrão)
+Pasta com macros para colegas:          .xlsm
+Pasta de 80 MB com Power Query/Pivot:   .xlsb (até 10× menor)
+Troca com sistema/banco:                .csv (UTF-8)
+Modelo reutilizável:                    .xltx (vira modelo, abre cópia)`}),e.jsx("h2",{children:"Quando .xlsb te trai"}),e.jsxs("ul",{children:[e.jsx("li",{dangerouslySetInnerHTML:{__html:"Excel Online tem suporte limitado"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"Algumas ferramentas de BI não leem (verifique Power BI Desktop atual)"}}),e.jsx("li",{dangerouslySetInnerHTML:{__html:"Não dá para inspecionar XML internamente (binário)"}})]})]})}export{i as default};
